@@ -12,6 +12,7 @@ function meat_header() {
 }
 add_action('wp_head', 'meat_header');
 
+// 移除 wp_emoji
 function disable_emojicons_tinymce( $plugins ) {
   if ( is_array( $plugins ) ) {
     return array_diff( $plugins, array( 'wpemoji' ) );
@@ -34,3 +35,11 @@ function disable_wp_emojicons() {
   add_filter( 'emoji_svg_url', '__return_false' );
 }
 add_action( 'init', 'disable_wp_emojicons' );
+
+// 将 jquery 移到 footer
+function starter_scripts() {
+  wp_deregister_script( 'jquery' );
+  wp_register_script( 'jquery', includes_url( '//cdn.staticfile.org/jquery/3.2.1/jquery.min.js' ), false, NULL, true );
+  wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'starter_scripts' );
