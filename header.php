@@ -6,12 +6,6 @@
  * Time: 上午12:12
  */
 
-// 增加自定义样式
-function meat_header() {
-  echo '<link rel="stylesheet" href="//qiniu.meathill.com/prism.min.css" >';
-}
-add_action('wp_head', 'meat_header');
-
 // 移除 wp_emoji
 function disable_emojicons_tinymce( $plugins ) {
   if ( is_array( $plugins ) ) {
