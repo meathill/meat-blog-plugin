@@ -20,5 +20,6 @@ define('DIR', dirname(__FILE__));
 // 加载其它php
 require(DIR . '/feed.php');
 require(DIR . '/header.php');
+require(DIR . '/content.php');
 require(DIR . '/footer.php');
 require(DIR . '/assets.php');
