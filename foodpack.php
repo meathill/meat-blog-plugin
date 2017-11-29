@@ -22,4 +22,3 @@ require(DIR . '/feed.php');
 require(DIR . '/header.php');
 require(DIR . '/footer.php');
 require(DIR . '/assets.php');
-require(DIR . '/ad.php');
