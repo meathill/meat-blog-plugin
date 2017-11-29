@@ -21,14 +21,19 @@
   // Feed ad
   if (document.body.classList.contains('home')) {
     var ins = document.createElement('ins');
+    ins.className = 'adsbygoogle';
     ins.style.display = 'block';
-    ins.dataset['ad-format'] = 'fluid';
-    ins.dataset['ad-layout-key'] = "-ek+69+u-c0+ip";
-    ins.dataset['ad-client'] = "ca-pub-9946806099979342";
-    ins.dataset['ad-slot'] = "3936377876";
-    var articles = document.getElementsByName('article');
+    ins.style.height = '200px';
+    ins.style.padding = '0';
+    ins.style.marginBottom = '7em';
+    ins.style.backgroundColor = 'transparent';
+    ins.dataset.adFormat = 'fluid';
+    ins.dataset.adLayoutKey = "-ek+69+u-c0+ip";
+    ins.dataset.adClient = "ca-pub-9946806099979342";
+    ins.dataset.adSlot = "3936377876";
+    var articles = document.getElementsByTagName('article');
     var article = articles.length > 3 ? articles[3] : articles[articles.length - 1];
-    document.insertBefore(ins, article);
+    article.parentNode.insertBefore(ins, article);
     (adsbygoogle = window.adsbygoogle || []).push({});
   }
 
