@@ -1,6 +1,6 @@
 <?php
 
-add_filter( 'the_content', 'prefix_insert_post_ads' );
+add_filter( 'the_content', 'prefix_insert_feed_ad' );
 
 function prefix_insert_feed_ad( $content ) {
   if ( is_single() || is_admin() ) {
