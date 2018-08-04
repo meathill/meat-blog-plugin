@@ -15,7 +15,7 @@ function check_weixin() {
     $content .= '<div class="weixin-gathering">
   <hr>
   <p>随手打赏，满身余香。您的支持将鼓励我继续创作！</p>
-  <p><img src="http://qiniu.meathill.com/image/weixin-gathering.png"></p>
+  <p><img src="//qiniu.meathill.com/image/weixin-gathering.png"></p>
 </div>';
     return $content;
   }
