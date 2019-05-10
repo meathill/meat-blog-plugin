@@ -33,7 +33,7 @@ add_action( 'init', 'disable_wp_emojicons' );
 // 将 jquery 移到 footer
 function starter_scripts() {
   wp_deregister_script( 'jquery' );
-  wp_register_script( 'jquery', '//cdn.staticfile.org/jquery/3.2.1/jquery.min.js', false, NULL, true );
+  wp_register_script( 'jquery', '//cdn.staticfile.org/jquery/3.4.1/jquery.min.js', false, NULL, true );
   wp_enqueue_script( 'jquery' );
 }
 add_action( 'wp_enqueue_scripts', 'starter_scripts' );

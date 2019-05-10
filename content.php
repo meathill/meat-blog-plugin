@@ -24,3 +24,9 @@ function check_weixin() {
   }
 }
 add_action('template_redirect', 'check_weixin');
+
+function add_lazy_load_to_images($content) {
+  $content = str_replace('<img','<img loading="lazy"', $content);
+  return $content;
+}
+add_filter('the_content','add_lazy_load_to_images');
